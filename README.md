@@ -33,10 +33,12 @@ response = get("http://example.com")
 print(response.status_code)  # Output: 200
 
 response = post("http://localhost/", data={"username":"admin", "password":"12345"})
-print(response.body)  # Output: 415
+print(response.status_code)  # Output: 415
 
 response = post("http://localhost/", data={"username":"admin", "password":"12345"}, headers={"Content-Type": "application/json"})
-print(response.body)  # Output: 403
+print(response.status_code)  # Output: 200
+
+open('success_post.html', 'w').write(response.body)
 ```
 
 2. Building up your request by hand:

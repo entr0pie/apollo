@@ -35,7 +35,6 @@ print(response.status_code)  # Output: 200
 response = post("http://localhost/", data={"username":"admin", "password":"12345"})
 print(response.body)  # Output: 415
 
-
 response = post("http://localhost/", data={"username":"admin", "password":"12345"}, headers={"Content-Type": "application/json"})
 print(response.body)  # Output: 403
 ```

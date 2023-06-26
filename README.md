@@ -36,9 +36,9 @@ response = post("http://localhost/", data={"username":"admin", "password":"12345
 print(response.status_code)  # Output: 415
 
 response = post("http://localhost/", data={"username":"admin", "password":"12345"}, headers={"Content-Type": "application/json"})
-print(response.status_code)  # Output: 200
 
-open('success_post.html', 'w').write(response.body)
+if response.status_code == 200:
+    response.print()
 ```
 
 2. Building up your request by hand:

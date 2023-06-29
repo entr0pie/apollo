@@ -1,0 +1,21 @@
+{
+  "Request": {
+    "method":"GET",
+    "path":"/",
+    "http_version":"HTTP/1.1",
+    "headers":{
+      "User-Agent":"Apollo"
+    },
+    "body":""
+  },
+
+  "Response":{
+    "http_version":"HTTP/1.1",
+    "status_code":500,
+    "status_message":"Internal Server Error",
+    "headers":{
+      "Server":"Apollo"
+    },
+    "body":""
+  }
+}
